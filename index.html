@@ -2,11 +2,21 @@
 <script>
 targetLink = "baidu";
     var thirdHost = "";
+    var butt = "daohang:8888";
     var host = window.location.host;
     var names = host.split(".");
     if (names.length >= 3) {
-    thirdHost = names[0] + ".";
+        thirdHost = names[0] + ".";
     }
-    let url = "https://" + thirdHost + targetLink + "daohang.top:8888";
+    if (names[1] == 2) {
+        butt = "2.top:8888";
+    }
+    if (names[1] == 3) {
+        butt = "3.top";
+    }
+    if (names[1] == 5) {
+        butt = "5.top:8888";
+    }
+    let url = "https://" + thirdHost + targetLink + butt;
     window.location = url;
 </script>
